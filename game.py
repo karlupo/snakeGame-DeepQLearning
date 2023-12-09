@@ -24,7 +24,7 @@ BLUE2 = (0, 100, 255)
 BLACK = (0,0,0)
 
 BLOCK_SIZE = 20
-SPEED = 10
+SPEED = 1000
 
 class SnakeGameAI:
     
@@ -76,7 +76,7 @@ class SnakeGameAI:
             game_over = True
             reward = -10
             return reward, game_over, self.score
-            
+
         # 4. place new food or just move
         if self.head == self.food:
             self.score += 1
